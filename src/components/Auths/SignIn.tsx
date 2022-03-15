@@ -66,6 +66,10 @@ export default function SignIn() {
     },
     onError: (err) => {
       console.log(err.graphQLErrors[0].extensions.errors);
+      // const message = err.graphQLErrors[0].extensions.errors.email | '';
+      setError('email', {
+        message: 'hehe',
+      });
     },
   });
 
